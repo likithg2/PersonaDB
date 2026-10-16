@@ -49,7 +49,7 @@ sqlclass/
 
    ```bash
    git clone <your-repository-url>
-   cd sqlclass
+   cd PersonaDB
    ```
 
 2. Install dependencies:
