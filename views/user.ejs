@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>users</title>
+</head>
+<body>
+    <table border="3px solid black" style=" margin:auto; text-align:center;">
+    <caption>user details: <%=data.length%> <form  action="/user/add">
+        <button>add user</button>
+    </form> </caption>
+        
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Email</th>
+
+    </tr>
+    
+    <% for(let i=0;i<data.length;i++){ %>
+    
+     <tr>
+        <td><%=data[i].id%> </td>
+        <td><%=data[i].username%> </td>
+        <td><%=data[i].email%></td>
+        <td>
+            <form action="/user/<%=data[i].id%>/edit">
+                <button> edit username </button>
+            </form>
+        </td>
+        <td>    
+            <form action="/user/<%=data[i].id%>/delete">
+                <button> delete user </button>
+            </form>
+        </td>
+     </tr>
+     
+     
+    
+     
+   
+    
+        <%}%>
+    
+    </table>
+</body>
+</html>
